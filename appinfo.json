@@ -1,0 +1,29 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "Nicholas Currault",
+    "longName": "Classy Sweep",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/Classy Sweep.png",
+                "name": "IMAGE_BACKGROUND",
+                "type": "png"
+            }
+        ]
+    },
+    "sdkVersion": "3",
+    "shortName": "Classy Sweep",
+    "targetPlatforms": [
+        "aplite",
+        "basalt"
+    ],
+    "uuid": "1df417c8-0662-11e5-a6c0-1697f925ec7b",
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": true
+    }
+}
