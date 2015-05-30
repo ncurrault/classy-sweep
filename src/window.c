@@ -11,8 +11,8 @@ static GBitmap *s_res_image_background;
 static GFont s_res_gothic_24_bold;
 static BitmapLayer *background;
 static TextLayer *dateLayer;
-static Layer *hourLayer;
 static Layer *minuteLayer;
+static Layer *hourLayer;
 static Layer *secondLayer;
 static Layer *pivotLayer;
 
@@ -38,13 +38,13 @@ static void initialise_ui(void) {
   text_layer_set_font(dateLayer, s_res_gothic_24_bold);
   layer_add_child(window_get_root_layer(s_window), (Layer *)dateLayer);
   
-  // hourLayer
-  hourLayer = layer_create(GRect(0, 0, 144, 168));
-  layer_add_child(window_get_root_layer(s_window), (Layer *)hourLayer);
-  
   // minuteLayer
   minuteLayer = layer_create(GRect(0, 0, 144, 168));
   layer_add_child(window_get_root_layer(s_window), (Layer *)minuteLayer);
+  
+  // hourLayer
+  hourLayer = layer_create(GRect(0, 0, 144, 168));
+  layer_add_child(window_get_root_layer(s_window), (Layer *)hourLayer);
   
   // secondLayer
   secondLayer = layer_create(GRect(0, 0, 144, 168));
@@ -59,8 +59,8 @@ static void destroy_ui(void) {
   window_destroy(s_window);
   bitmap_layer_destroy(background);
   text_layer_destroy(dateLayer);
-  layer_destroy(hourLayer);
   layer_destroy(minuteLayer);
+  layer_destroy(hourLayer);
   layer_destroy(secondLayer);
   layer_destroy(pivotLayer);
   gbitmap_destroy(s_res_image_background);
